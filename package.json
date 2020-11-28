@@ -2,7 +2,7 @@
   "name": "cashrates",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://liester.github.io/cashrates",
+  "homepage": "https://liester.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.2.1",
