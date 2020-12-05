@@ -5,7 +5,7 @@ import Container from "../../common/Container";
 import ScrollToTop from "../../common/ScrollToTop";
 
 
-const Home = () => {
+const Search = () => {
   return (
     <Container>
       <ScrollToTop />
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;
