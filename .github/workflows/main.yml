@@ -16,11 +16,7 @@ jobs:
         uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
         env:
           CI: false
-  copy-index:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: List contents
-        run: ls
+          run: ls
       - name: Copy built index.html into 404.html
         run: cp build/index.html build/404.html
