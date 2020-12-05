@@ -16,7 +16,7 @@ jobs:
         uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
         env:
           CI: false
-  404Page:
+  copy-index:
     runs-on: ubuntu-latest
 
     steps:
