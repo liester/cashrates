@@ -9,7 +9,6 @@ import ScrollToTop from "../../common/ScrollToTop";
 import Introduction from "../../content/introduction.json";
 import FirstBlock from "../../content/firstBlock.json";
 import SecondBlock from "../../content/secondBlock.json";
-import ThirdBlock from "../../content/thirdBlock.json";
 import FourthBlock from "../../content/fourthBlock.json";
 import ContactBlock from "../../content/contactBlock.json";
 
