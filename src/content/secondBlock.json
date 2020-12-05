@@ -1,15 +1,15 @@
 {
-  "title": "Light, Fast & Responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "For Healthcare Providers",
+  "text": "Looking to get listed on the site?  Please fill out the contact form below and someone from our team will reach out with details.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a plethora of easy-to-use components that are useful for building elegant UI.",
+      "title": "Why patients use us",
+      "content": "There are many reasons individuals prefer not to use their insurance.  Privacy and financial are just two of those reasons.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components, instead of using a multitude of conditional class names.",
+      "title": "What's the value?",
+      "content": "This service was built to help people find valuable services, not get rich.  The monthly cost is less than a gourmet coffee.",
       "icon": "notes.svg"
     }
   ]

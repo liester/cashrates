@@ -1,13 +1,9 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed template using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Find the best prices for your healthcare",
+  "text": "If you are looking for the right price for the right service you've found a great place to start",
   "button": [
     {
       "title": "Explore"
-    },
-    {
-      "title": "Learn More!",
-      "color": "#fff"
     }
   ]
 }

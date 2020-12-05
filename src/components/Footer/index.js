@@ -107,46 +107,46 @@ const Footer = () => {
               </S.NavLink>
               <S.FooterContainer>
                 <a
-                  href="https://github.com/Adrinlol/create-react-app-adrinlol"
+                  href="https://github.com/liester"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <SvgIcon src="github.svg" />
                 </a>
                 <a
-                  href="https://twitter.com/Adrinlolx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon src="twitter.svg" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/lasha-kakabadze//"
+                  href="https://www.linkedin.com/in/levi-liester-3485b42b/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <SvgIcon src="linkedin.svg" />
                 </a>
-                <a
-                  href="https://github.com/Adrinlol/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon src="instagram.svg" />
-                </a>
-                <a
-                  href="https://medium.com/@lashakakabadze/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon src="medium.svg" />
-                </a>
+                {/*<a*/}
+                {/*  href="https://twitter.com/Adrinlolx"*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*>*/}
+                {/*  <SvgIcon src="twitter.svg" />*/}
+                {/*</a>*/}
+                {/*<a*/}
+                {/*  href="https://github.com/Adrinlol/"*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*>*/}
+                {/*  <SvgIcon src="instagram.svg" />*/}
+                {/*</a>*/}
+                {/*<a*/}
+                {/*  href="https://medium.com/@lashakakabadze/"*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*>*/}
+                {/*  <SvgIcon src="medium.svg" />*/}
+                {/*</a>*/}
               </S.FooterContainer>
             </Row>
             <Row type="flex" justify="space-between">
               <Col lg={12} md={12} sm={12} xs={24}>
                 <S.CSite>
-                  All Rights Reserved - Landy © {new Date().getFullYear()}
+                  All Rights Reserved - Mind Canary © {new Date().getFullYear()}
                 </S.CSite>
               </Col>
             </Row>
