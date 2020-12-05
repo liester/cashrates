@@ -20,5 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: List contents
+        - run: ls
       - name: Copy built index.html into 404.html
         run: cp build/index.html build/404.html
