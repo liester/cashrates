@@ -37,12 +37,12 @@ const Home = () => {
         section={SecondBlock.section}
         icon="graphs.svg"
       />
-      <ContentBlock
-        type="right"
-        title={ThirdBlock.title}
-        content={ThirdBlock.text}
-        icon="product-launch.svg"
-      />
+      {/*<ContentBlock*/}
+      {/*  type="right"*/}
+      {/*  title={ThirdBlock.title}*/}
+      {/*  content={ThirdBlock.text}*/}
+      {/*  icon="product-launch.svg"*/}
+      {/*/>*/}
 
       <ContentBlock
         type="left"
