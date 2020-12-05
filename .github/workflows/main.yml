@@ -17,6 +17,6 @@ jobs:
         env:
           CI: false
       - name: List contents
-          run: ls
+        run: ls
       - name: Copy built index.html into 404.html
         run: cp build/index.html build/404.html
