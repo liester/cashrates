@@ -7,6 +7,7 @@ import SvgIcon from "../../../common/SvgIcon";
 import Button from "../../../common/Button";
 
 import * as S from "./styles";
+import {Link} from "react-router-dom";
 
 const RightBlock = ({ last, first, title, content, button, icon }) => {
   const { t } = useTranslation();
@@ -24,9 +25,11 @@ const RightBlock = ({ last, first, title, content, button, icon }) => {
                   typeof button === "object" &&
                   button.map((item, id) => {
                     return (
-                      <Button key={id} color={item.color} width="true">
-                        {t(item.title)}
-                      </Button>
+                      <Link to={item.route}>
+                        <Button key={id} color={item.color} width="true">
+                          {t(item.title)}
+                        </Button>
+                      </Link>
                     );
                   })}
               </S.ButtonWrapper>

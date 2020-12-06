@@ -3,7 +3,8 @@
   "text": "If you are looking for the right price for the right service you've found a great place to start",
   "button": [
     {
-      "title": "Explore"
+      "title": "Explore",
+      "route": "/search"
     }
   ]
 }
