@@ -7,7 +7,6 @@ import SvgIcon from "../../../common/SvgIcon";
 import Button from "../../../common/Button";
 
 import * as S from "./styles";
-import {Link} from "react-router-dom";
 
 const RightBlock = ({last, first, title, content, button, icon}) => {
   const {t} = useTranslation();
