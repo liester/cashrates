@@ -17,7 +17,7 @@ jobs:
         shell: bash
       - run: npm run build
         shell: bash
-      - run: cp build/index.html build/404.html
+      - run: cp build/index.html build/404.html #This is required for GitHub Pages and React Router
         shell: bash
       - run : git config user.name github-actions
         shell: bash
