@@ -30,7 +30,7 @@
     "build": "craco build",
     "test": "craco test ",
     "predeploy": "npm run build && cp build/index.html build/404.html",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
