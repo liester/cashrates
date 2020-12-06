@@ -16,7 +16,6 @@ import {Button} from "antd";
 const Home = () => {
   return (
     <Container>
-      <Button type="primary">Button</Button>
       <ScrollToTop />
       <ContentBlock
         type="right"
