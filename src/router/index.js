@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
+import React, {Suspense} from "react";
+import {Switch, Route} from "react-router-dom";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -9,12 +9,12 @@ import Search from "../pages/Search"
 const Router = () => {
   return (
     <Suspense>
-      <Header />
+      <Header/>
       <Switch>
-        <Route exact path={"/"} component={Home} />
-        <Route exact path={"/search"} component={Search} />
+        <Route exact path={"/"} component={Home}/>
+        <Route exact path={"/search"} component={Search}/>
       </Switch>
-      <Footer />
+      <Footer/>
     </Suspense>
   );
 };
