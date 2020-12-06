@@ -2,6 +2,7 @@ import React from "react";
 import {Row, Col} from "antd";
 import {useTranslation} from "react-i18next";
 import {Slide} from "react-reveal";
+import {useHistory} from "react-router-dom";
 
 import SvgIcon from "../../../common/SvgIcon";
 import Button from "../../../common/Button";
@@ -10,7 +11,7 @@ import * as S from "./styles";
 
 const RightBlock = ({last, first, title, content, button, icon}) => {
   const {t} = useTranslation();
-
+  let history = useHistory();
   return (
     <S.RightBlockContainer last={last} first={first}>
       <Row type="flex" justify="space-between" align="middle">
@@ -24,7 +25,7 @@ const RightBlock = ({last, first, title, content, button, icon}) => {
                 typeof button === "object" &&
                 button.map((item, id) => {
                   return (
-                    <Button key={id} color={item.color} width="true">
+                    <Button key={id} color={item.color} width="true" onClick={()=> item.route && history.push(`${item.route}`)}>
                       {t(item.title)}
                     </Button>
                   );
