@@ -11,12 +11,12 @@ import FirstBlock from "../../content/firstBlock.json";
 import SecondBlock from "../../content/secondBlock.json";
 import FourthBlock from "../../content/fourthBlock.json";
 import ContactBlock from "../../content/contactBlock.json";
-import {Button} from "antd";
 
 const Home = () => {
   return (
     <Container>
-      <ScrollToTop />
+      <ScrollToTop/>
+
       <ContentBlock
         type="right"
         first="true"
@@ -50,7 +50,7 @@ const Home = () => {
         content={FourthBlock.text}
         icon="waving.svg"
       />
-      <ContactFrom title={ContactBlock.title} content={ContactBlock.text} />
+      <ContactFrom title={ContactBlock.title} content={ContactBlock.text}/>
     </Container>
   );
 };
