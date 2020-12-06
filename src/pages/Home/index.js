@@ -11,10 +11,12 @@ import FirstBlock from "../../content/firstBlock.json";
 import SecondBlock from "../../content/secondBlock.json";
 import FourthBlock from "../../content/fourthBlock.json";
 import ContactBlock from "../../content/contactBlock.json";
+import {Button} from "antd";
 
 const Home = () => {
   return (
     <Container>
+      <Button type="primary">Button</Button>
       <ScrollToTop />
       <ContentBlock
         type="right"

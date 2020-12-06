@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import antd from "antd/dist/antd.css";
+import antd from "antd/dist/antd.less";
 
 const Styles = createGlobalStyle`
 
@@ -94,7 +94,6 @@ const Styles = createGlobalStyle`
         border-color: #d9d9d9 !important;
         box-shadow: none !important;
     }
-
 `;
 
 export default Styles;
