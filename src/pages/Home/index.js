@@ -1,6 +1,6 @@
 import React from "react";
 
-import ContactFrom from "../../components/ContactForm";
+import ContactForm from "../../components/ContactForm";
 import ContentBlock from "../../components/ContentBlock";
 import MiddleBlock from "../../components/MiddleBlock";
 import Container from "../../common/Container";
@@ -50,7 +50,7 @@ const Home = () => {
         content={FourthBlock.text}
         icon="waving.svg"
       />
-      <ContactFrom title={ContactBlock.title} content={ContactBlock.text}/>
+      <ContactForm title={ContactBlock.title} content={ContactBlock.text}/>
     </Container>
   );
 };

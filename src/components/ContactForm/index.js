@@ -12,7 +12,8 @@ import validate from "./validationRules";
 import * as S from "./styles";
 
 const Contact = ({id, title, content}) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  // const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange } = useForm(validate);
 
   return (
     <S.ContactContainer id={id}>
@@ -26,7 +27,7 @@ const Contact = ({id, title, content}) => {
             />
           </Col>
           <Col lg={12} md={12} sm={24} xs={24}>
-            <S.FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <S.FormGroup autoComplete="off" onSubmit={(e)=> e.preventDefault()}>
               <Col lg={24} md={24} sm={24} xs={24}>
                 <Input
                   type="text"
@@ -76,7 +77,7 @@ const Contact = ({id, title, content}) => {
               </Col>
               <S.ButtonContainer>
                 <Button name="submit" type="submit">
-                  Submit
+                  Coming Soon
                 </Button>
               </S.ButtonContainer>
             </S.FormGroup>
