@@ -30,7 +30,7 @@ const Footer = () => {
                     `Do you have any question regarding the project? Fell free to reach out.`
                   )}
                 </S.Para>
-                <a href="mailto:l.qqbadze@gmail.com">
+                <a href="mailto:levi.liester@gmail.com">
                   <S.Chat>{t(`Let's Chat`)}</S.Chat>
                 </a>
               </Col>
@@ -57,9 +57,9 @@ const Footer = () => {
               <Col lg={10} md={10} sm={12} xs={24}>
                 <S.Empty />
                 <S.Language>{t("ADDRESS")}</S.Language>
-                <S.Para>Rancho Santa Margarita</S.Para>
-                <S.Para>2131 Elk Street</S.Para>
-                <S.Para>California</S.Para>
+                <S.Para>Omaha, Nebraska</S.Para>
+                {/*<S.Para>2131 Elk Street</S.Para>*/}
+                {/*<S.Para>California</S.Para>*/}
               </Col>
               <Col lg={8} md={8} sm={12} xs={24}>
                 <S.Title>{t("Company")}</S.Title>
