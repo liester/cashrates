@@ -57,7 +57,7 @@ const Search = () => {
       <SearchBar onChange={handleSearchOnChange}/>
       <S.SearchResultsContent>
         {providerResults.map(provider => {
-          return (<S.CardContainer>
+          return (<S.CardContainer key={provider.id}>
             <Card hoverable>
               <CardContent provider={provider}/>
             </Card>
