@@ -13,7 +13,13 @@ export const CardContent = styled.div`
 
 export const ProfileImage = styled.img`
   border-radius: 50%;
-  height: 75px;
+  height: 125px;
+  width: 125px;
+  object-fit: cover;
+`;
+
+export const ProfileName = styled.div`
+  font-size: 20px;
 `;
 
 export const CashRate = styled.div`

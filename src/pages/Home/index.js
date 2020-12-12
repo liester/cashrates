@@ -50,7 +50,7 @@ const Home = () => {
         content={FourthBlock.text}
         icon="waving.svg"
       />
-      <ContactForm title={ContactBlock.title} content={ContactBlock.text}/>
+      <ContactForm title={ContactBlock.title} content={ContactBlock.text} id={'contact-form'}/>
     </Container>
   );
 };
