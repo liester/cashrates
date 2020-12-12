@@ -37,8 +37,11 @@ const CardContent = (props) => {
 }
 
 const filterOnSearch = (searchString, provider) => {
-  return provider.first_name.toString().toLowerCase().includes(searchString) ||
-    provider.last_name.toString().toLowerCase().includes(searchString)
+  const providerFirstName = provider.first_name.toLowerCase();
+  const providerLastName = providerFirstName.toLowerCase()
+  const search = searchString.toLowerCase();
+  return providerFirstName.includes(search) ||
+    providerLastName.includes(search)
 }
 
 const Search = () => {
@@ -52,7 +55,7 @@ const Search = () => {
 
   const providerResults = providers.slice(0, 30).filter((provider) => filterOnSearch(searchString, provider))
   return (
-    <Container>
+    <Container style={{justifyContent: 'flex-start'}}>
       <ScrollToTop/>
       <SearchBar onChange={handleSearchOnChange}/>
       <S.SearchResultsContent>
