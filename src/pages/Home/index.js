@@ -14,7 +14,7 @@ import ContactBlock from "../../content/contactBlock.json";
 
 const Home = () => {
   return (
-    <Container>
+    <Container flexDirection={"column"}>
       <ScrollToTop/>
 
       <ContentBlock

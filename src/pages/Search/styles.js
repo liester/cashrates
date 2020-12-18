@@ -33,7 +33,7 @@ export const SearchResultsContent = styled.div`
   min-height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   `;

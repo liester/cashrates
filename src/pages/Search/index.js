@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from "react";
+import { useHistory } from "react-router-dom"
 
 import Container from "../../common/Container";
 import ScrollToTop from "../../common/ScrollToTop";
@@ -52,16 +53,17 @@ const Search = () => {
     },
     [setSearchString],
   );
+  const history = useHistory();
 
   const providerResults = providers.slice(0, 30).filter((provider) => filterOnSearch(searchString, provider))
   return (
-    <Container style={{justifyContent: 'flex-start'}}>
+    <Container flexDirection={"column"}>
       <ScrollToTop/>
       <SearchBar onChange={handleSearchOnChange}/>
       <S.SearchResultsContent>
         {providerResults.map(provider => {
           return (<S.CardContainer key={provider.id}>
-            <Card hoverable>
+            <Card hoverable onClick={()=> history.push(`/profile/${provider.id}`)}>
               <CardContent provider={provider}/>
             </Card>
           </S.CardContainer>)
