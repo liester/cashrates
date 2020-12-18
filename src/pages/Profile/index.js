@@ -39,7 +39,7 @@ const Profile = (props) => {
   const {profileId} = props.match.params
   const provider = useMemo(() => {
     for (let i = 0; i < providers.length; i++) {
-      if (providers[i].id == profileId) {
+      if (providers[i].id === profileId) {
         return providers[i]
         break;
       }
