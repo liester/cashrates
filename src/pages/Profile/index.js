@@ -41,7 +41,6 @@ const Profile = (props) => {
     for (let i = 0; i < providers.length; i++) {
       if (providers[i].id === profileId) {
         return providers[i]
-        break;
       }
     }
   }, [profileId])
