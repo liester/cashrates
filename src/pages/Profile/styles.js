@@ -8,5 +8,9 @@ export const ProfileImage = styled.img`
 `;
 
 export const Bio = styled.div`
-  font-size: 25px;
+  font-size: 20px;
   `;
+
+export const BioHeader = styled.div`
+  Font-size: 30px;
+`;

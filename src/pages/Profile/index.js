@@ -62,6 +62,7 @@ const Profile = (props) => {
           {renderList(communities, 'Communities')}
         </Col>
         <Col lg={12} md={12} sm={12} xs={24}>
+          <S.BioHeader>About Me</S.BioHeader>
           <S.Bio>{bio}</S.Bio>
         </Col>
         <Col lg={6} md={24} sm={12} xs={24}>
