@@ -4,10 +4,11 @@ import ScrollToTop from "../../common/ScrollToTop";
 import providers from '../../content/providers.json'
 import * as S from './styles'
 import profileImages from "../../content/profile-images.json";
+import {Col, Row} from "antd";
 
 const specialties = ['Specialties', 'Anxiety', 'Trauma and PTSD', 'Depression']
 
-const issues = ['Issues', 'Adoption', 'Anger Management', 'Behavioral Issues', 'Bipolar Disorder', 'Child or Adolescent', 'Coping Skills', 'Dual Diagnosis', 'Eating Disorders', 'Emotional Disturbance', 'Grief', 'Life Transitions', 'Oppositional Defiance', 'Parenting', 'Relationship Issues', 'Self Esteem', 'Stress']
+const issues = ['Adoption', 'Anger Management', 'Behavioral Issues', 'Bipolar Disorder', 'Child or Adolescent', 'Coping Skills', 'Dual Diagnosis', 'Eating Disorders', 'Emotional Disturbance', 'Grief', 'Life Transitions', 'Oppositional Defiance', 'Parenting', 'Relationship Issues', 'Self Esteem', 'Stress']
 
 const qualifications = {
   yearsInPractice: 4,
@@ -47,8 +48,8 @@ const Profile = (props) => {
   return (
     <Container flexDirection={"column"}>
       <ScrollToTop/>
-      <Container>
-        <Container flexDirection={"column"}>  {/*First Column*/}
+      <Row>
+        <Col lg={6} md={8} sm={12} xs={24} >
           <S.ProfileImage src={profileImages[provider.id]}/>
           <Container>{provider.first_name} {provider.last_name}</Container>
           <Container flexDirection={"column"}>
@@ -59,18 +60,19 @@ const Profile = (props) => {
             <div>{`Graduation Year: ${qualifications.yearGraduated}`}</div>
           </Container>
           {renderList(communities, 'Communities')}
-        </Container>
-        <Container flexDirection={"column"} style={{fontSize: '25px'}} flexGrow={2}>  {/*Second Column*/}
-          {bio}
-        </Container>
-        <Container flexDirection={"column"}>  {/*Third Column*/}
+        </Col>
+        <Col lg={12} md={12} sm={12} xs={24}>
+          <S.Bio>{bio}</S.Bio>
+        </Col>
+        <Col lg={6} md={24} sm={12} xs={24}>
           {renderList(clientAges, 'Client Ages')}
           {renderList(typesOfTherapy, 'Types of Therapy')}
           {renderList(modalities, 'Modalities')}
           {renderList(specialties, 'Specialties')}
           {renderList(issues, 'Issues')}
-        </Container>
-      </Container>
+        </Col>
+        {/*</Container>*/}
+      </Row>
     </Container>
   );
 };

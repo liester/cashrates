@@ -9,6 +9,7 @@ const Container = (props) => (
 
 Container.propTypes = {
   flexDirection: PropTypes.oneOf(['row', 'column']),
-  flexGrow: PropTypes.number
+  flexGrow: PropTypes.number,
+  justifyContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
 }
 export default Container;

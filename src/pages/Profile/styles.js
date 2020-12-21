@@ -6,3 +6,7 @@ export const ProfileImage = styled.img`
   object-fit: cover;
   border-radius: 20px;
 `;
+
+export const Bio = styled.div`
+  font-size: 25px;
+  `;

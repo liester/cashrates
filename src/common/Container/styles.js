@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : "row")};;
+  flex-direction: ${(props) => (props.flexDirection ? props.flexDirection : "row")};
+  justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "flex-start")};
   position: relative;
   width: 100%;
   max-width: 1280px;
