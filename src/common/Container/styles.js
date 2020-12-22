@@ -9,7 +9,7 @@ export const Container = styled.div`
   max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
-  padding: ${(props) => (props.padding ? "2.8rem" : "0 25px")};
+  padding: ${(props) => (props.padding ? "2.8rem" : "0px")};
   overflow: hidden;
   border-top: ${(props) => (props.border ? "1px solid #CDD1D4" : "")};
   color: #0a1f44;

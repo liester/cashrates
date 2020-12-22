@@ -4,7 +4,7 @@ import ScrollToTop from "../../common/ScrollToTop";
 import providers from '../../content/providers.json'
 import * as S from './styles'
 import profileImages from "../../content/profile-images.json";
-import {Col, Row} from "antd";
+import Button from "../../common/Button";
 
 const specialties = ['Specialties', 'Anxiety', 'Trauma and PTSD', 'Depression']
 
@@ -48,8 +48,8 @@ const Profile = (props) => {
   return (
     <Container flexDirection={"column"}>
       <ScrollToTop/>
-      <Row>
-        <Col lg={6} md={8} sm={12} xs={24} >
+      <Container>
+        <Container flexDirection={"column"} style={{width: "400px"}}>
           <S.ProfileImage src={profileImages[provider.id]}/>
           <Container>{provider.first_name} {provider.last_name}</Container>
           <Container flexDirection={"column"}>
@@ -60,20 +60,21 @@ const Profile = (props) => {
             <div>{`Graduation Year: ${qualifications.yearGraduated}`}</div>
           </Container>
           {renderList(communities, 'Communities')}
-        </Col>
-        <Col lg={12} md={12} sm={12} xs={24}>
+          <Button>Send Email</Button>
+        </Container>
+        <Container flexDirection={"column"} padding>
           <S.BioHeader>About Me</S.BioHeader>
           <S.Bio>{bio}</S.Bio>
-        </Col>
-        <Col lg={6} md={24} sm={12} xs={24}>
+        </Container>
+        <Container flexDirection={"column"}  style={{width: "400px"}}>
           {renderList(clientAges, 'Client Ages')}
           {renderList(typesOfTherapy, 'Types of Therapy')}
           {renderList(modalities, 'Modalities')}
           {renderList(specialties, 'Specialties')}
           {renderList(issues, 'Issues')}
-        </Col>
+        </Container>
         {/*</Container>*/}
-      </Row>
+      </Container>
     </Container>
   );
 };
