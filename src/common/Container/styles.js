@@ -9,11 +9,13 @@ export const Container = styled.div`
   max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
-  padding: ${(props) => (props.padding ? "2.8rem" : "0px")};
+  padding: ${(props) => (props.padding ? props.padding || "2.8rem" : "0px")};
   overflow: hidden;
   border-top: ${(props) => (props.border ? "1px solid #CDD1D4" : "")};
   color: #0a1f44;
-  flex-grow: ${(props) => (props.flexGrow ? props.flexGrow : 1)}
+  flex-grow: ${(props) => (props.flexGrow ? props.flexGrow : 0)};
+  align-items: ${(props) => (props.alignItems ? props.alignItems : 'inherit')};
+  align-self: ${(props) => (props.alignSelf ? props.alignSelf : 'inherit')};
   @media only screen and (max-width: 1024px) {
     max-width: 950px;
   }

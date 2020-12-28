@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from "react";
-import { useHistory } from "react-router-dom"
+import {useHistory} from "react-router-dom"
 
 import Container from "../../common/Container";
 import ScrollToTop from "../../common/ScrollToTop";
@@ -9,27 +9,43 @@ import providers from '../../content/providers.json'
 import profileImages from '../../content/profile-images.json'
 import * as S from './styles.js';
 
+const renderList = (list, title) => {
+  return (
+    <Container flexDirection={"column"}>
+      <div style={{fontSize: "20px"}}>{title.toUpperCase()}</div>
+      {list.map(item => <div>{item}</div>)}
+    </Container>
+  )
+}
+
 const CardContent = (props) => {
   const {provider} = props;
   return (
     <S.CardContent>
       <S.ProfileImage src={profileImages[provider.id]}></S.ProfileImage>
-      <div>
-        <div>
-          {provider.first_name} {provider.last_name}
-        </div>
-        <div>
+      <Container flexDirection={'column'} alignItems={'start'} alignSelf={'start'} padding={'.6em'}>
+        <Container>
+          <S.ProfileName>
+            {provider.first_name} {provider.last_name}
+          </S.ProfileName>
+          <span>&#8226;</span>
+          <div>
+            {`(${provider.gender === 'Male' ? 'he/his' : 'she/hers'})`}
+          </div>
+        </Container>
+        <S.License>
           {provider.id % 2 === 0 ? `PLMHP` : `LADAC`}
-        </div>
-      </div>
-      <div>
-        <div>
-          {provider.gender}
-        </div>
-        <div>
-          {provider.credentialed_with}
-        </div>
-      </div>
+        </S.License>
+        <S.Experience>
+          {`Experience: ${Math.floor(Math.random()*10) + 1} yrs`}
+        </S.Experience>
+      </Container>
+      <Container flexDirection={'column'}>
+        {renderList(['Acceptance and Commitment (ACT)', 'Attachment-based', 'Cognitive Behavioral (CBT)'], 'Specialties')}
+      </Container>
+      <Container flexDirection={'column'}>
+        {renderList(['Adoption', 'Anger Management', 'Behavioral Issues'], 'Issues')}
+      </Container>
       <S.CashRate>
         <span style={{fontSize: '20px'}}>$</span>{provider.cash_rate}
       </S.CashRate>
@@ -63,7 +79,7 @@ const Search = () => {
       <S.SearchResultsContent>
         {providerResults.map(provider => {
           return (<S.CardContainer key={provider.id}>
-            <Card hoverable onClick={()=> history.push(`/profile/${provider.id}`)}>
+            <Card hoverable onClick={() => history.push(`/profile/${provider.id}`)}>
               <CardContent provider={provider}/>
             </Card>
           </S.CardContainer>)

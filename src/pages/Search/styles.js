@@ -42,3 +42,11 @@ export const NoResults = styled.div`
   font-size: 25px;
   color: #ff825c;
   `;
+
+export const License = styled.div`
+  font-size: 18px;
+  `;
+
+export const Experience = styled.div`
+  font-size: 18px;
+  `;

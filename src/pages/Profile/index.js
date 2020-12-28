@@ -51,7 +51,8 @@ const Profile = (props) => {
       <Container>
         <Container flexDirection={"column"} style={{width: "400px"}}>
           <S.ProfileImage src={profileImages[provider.id]}/>
-          <Container>{provider.first_name} {provider.last_name}</Container>
+          <Container style={{fontSize: '30px', paddingLeft: '5px'}}>{provider.first_name} {provider.last_name}</Container>
+          <Button>Send Email</Button>
           <Container flexDirection={"column"}>
             <div style={{fontSize: "20px"}}>QUALIFICATIONS</div>
             <div>{`Years in Practice: ${qualifications.yearsInPractice}`}</div>
@@ -60,20 +61,21 @@ const Profile = (props) => {
             <div>{`Graduation Year: ${qualifications.yearGraduated}`}</div>
           </Container>
           {renderList(communities, 'Communities')}
-          <Button>Send Email</Button>
+          {renderList(clientAges, 'Client Ages')}
+          {renderList(modalities, 'Modalities')}
+          {renderList(specialties, 'Specialties')}
         </Container>
         <Container flexDirection={"column"} padding>
           <S.BioHeader>About Me</S.BioHeader>
           <S.Bio>{bio}</S.Bio>
         </Container>
         <Container flexDirection={"column"}  style={{width: "400px"}}>
-          {renderList(clientAges, 'Client Ages')}
           {renderList(typesOfTherapy, 'Types of Therapy')}
-          {renderList(modalities, 'Modalities')}
-          {renderList(specialties, 'Specialties')}
           {renderList(issues, 'Issues')}
         </Container>
-        {/*</Container>*/}
+      </Container>
+      <Container>
+
       </Container>
     </Container>
   );
